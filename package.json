@@ -4,7 +4,17 @@
   "description": "JavaScript library to emit JSON \"events\" to splunk via a HEC",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    
+    "pkg-cli" : "npm run pkg-cli-win && npm run pkg-cli-mac && npm run pkg-cli-linux",
+    "pkg-cli-win" : "pkg --targets node12-win-x64 --output ./bin/win/splunk-emit ./cli.js",
+    "pkg-cli-mac" : "pkg --targets node12-macos-x64 --output ./bin/mac/splunk-emit ./cli.js",
+    "pkg-cli-linux" : "pkg --targets node12-linux-x64 --output ./bin/linux/splunk-emit ./cli.js",
+
+    "pkg-daemon" : "npm run pkg-daemon-win && npm run pkg-daemon-mac && npm run pkg-daemon-linux",
+    "pkg-daemon-win" : "pkg --targets node12-win-x64 --output ./bin/win/splunk-emit.d ./cli-daemon.js",
+    "pkg-daemon-mac" : "pkg --targets node12-macos-x64 --output ./bin/mac/splunk-emit.d ./cli-daemon.js",
+    "pkg-daemon-linux" : "pkg --targets node12-linux-x64 --output ./bin/linux/splunk-emit.d ./cli-daemon.js"
   },
   "repository": {
     "type": "git",
