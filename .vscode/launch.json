@@ -53,7 +53,7 @@
                 "<node_internals>/**"
             ],
             "env": {
-                "SPLUNK_URL" : "{SPLUNK_URL}",
+                  "SPLUNK_URL" : "{SPLUNK_URL}",
                 "SPLUNK_HEC" : "{SPLUNK_HEC}"
             },
             "args": [ "--msg", "{ 's' : '1', 'tags' : ['splunk-emit-test'] }" ]
