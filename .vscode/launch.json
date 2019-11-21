@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "run-test",
+            "program": "${workspaceFolder}/test/test.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                "SPLUNK_URL" : "{SPLUNK_URL}",
+                "SPLUNK_HEC" : "{SPLUNK_HEC}"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "run-test.daemon",
+            "program": "${workspaceFolder}/test/test.daemon.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                "SPLUNK_URL" : "{SPLUNK_URL}",
+                "SPLUNK_HEC" : "{SPLUNK_HEC}"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "run-cli-daemon",
+            "program": "${workspaceFolder}/cli-daemon.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                "SPLUNK_URL" : "{SPLUNK_URL}",
+                "SPLUNK_HEC" : "{SPLUNK_HEC}"
+            },
+            "args": ["--console"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "run-cli",
+            "program": "${workspaceFolder}/cli.js",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                "SPLUNK_URL" : "{SPLUNK_URL}",
+                "SPLUNK_HEC" : "{SPLUNK_HEC}"
+            },
+            "args": [ "--msg", "{ 's' : '1', 'tags' : ['splunk-emit-test'] }" ]
+        }
+    ]
+}
+      

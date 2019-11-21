@@ -1,0 +1,35 @@
+{
+  "name": "splunk-emit",
+  "version": "1.0.0",
+  "description": "JavaScript library to emit JSON \"events\" to splunk via a HEC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klatu201/splunk-emit.git"
+  },
+  "keywords": [
+    "splunk",
+    "HEC",
+    "json"
+  ],
+  "author": "klatu201",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klatu201/splunk-emit/issues"
+  },
+  "homepage": "https://github.com/klatu201/splunk-emit#readme",
+  "dependencies": {
+    "await-sleep": "0.0.1",
+    "daemon": "^1.1.0",
+    "hash.js": "^1.1.7",
+    "moment": "^2.24.0",
+    "node-ipc": "^9.1.1",
+    "request": "^2.88.0",
+    "tempfile": "^3.0.0",
+    "uuid": "^3.3.3",
+    "yargs": "^15.0.2"
+  }
+}
